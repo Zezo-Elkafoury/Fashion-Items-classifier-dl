@@ -17,24 +17,27 @@ The model is built using **TensorFlow/Keras** and follows modern deep learning p
 
 ## 🏗️ Model Architecture
 
-Input (28x28x1 grayscale image)
-│
-├── Conv2D(32 filters) + BatchNorm + ReLU
-├── Conv2D(32 filters) + BatchNorm + ReLU
-├── MaxPooling2D + Dropout(0.25)
-│
-├── Conv2D(64 filters) + BatchNorm + ReLU
-├── Conv2D(64 filters) + BatchNorm + ReLU
-├── MaxPooling2D + Dropout(0.25)
-│
-├── Conv2D(128 filters) + BatchNorm + ReLU
-├── Conv2D(128 filters) + BatchNorm + ReLU
-├── MaxPooling2D + Dropout(0.25)
-│
-├── Flatten
-├── Dense(128 units) + ReLU + Dropout(0.5)
-└── Dense(10 units, Softmax)
+Input: (28 x 28 x 1) grayscale image
 
+┌───────────────────────────────────────────────┐
+│ Conv2D (32 filters, 3x3) + BatchNorm + ReLU    │
+│ Conv2D (32 filters, 3x3) + BatchNorm + ReLU    │
+│ MaxPooling2D (2x2) + Dropout (0.25)            │
+└───────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────┐
+│ Conv2D (64 filters, 3x3) + BatchNorm + ReLU    │
+│ Conv2D (64 filters, 3x3) + BatchNorm + ReLU    │
+│ MaxPooling2D (2x2) + Dropout (0.25)            │
+└───────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────┐
+│ Conv2D (128 filters, 3x3) + BatchNorm + ReLU   │
+│ Conv2D (128 filters, 3x3) + BatchNorm + ReLU   │
+│ MaxPooling2D (2x2) + Dropout (0.25)            │
+└───────────────────────────────────────────────┘
+
+Flatten ➔ Dense (128 units) + ReLU + Dropout (0.5) ➔ Dense (10 units, Softmax)
 ## 📊 Results
 With proper training (10 epochs), this model achieves:
 
