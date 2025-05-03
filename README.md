@@ -20,19 +20,27 @@ The model is built using **TensorFlow/Keras** and follows modern deep learning p
 Input: (28 x 28 x 1) grayscale image
 
 Layer 1: Conv2D (32 filters, 3x3) + BatchNorm + ReLU
+
 Layer 2: Conv2D (32 filters, 3x3) + BatchNorm + ReLU
+
 Layer 3: MaxPooling2D (2x2) + Dropout (0.25)
 
 Layer 4: Conv2D (64 filters, 3x3) + BatchNorm + ReLU
+
 Layer 5: Conv2D (64 filters, 3x3) + BatchNorm + ReLU
+
 Layer 6: MaxPooling2D (2x2) + Dropout (0.25)
 
 Layer 7: Conv2D (128 filters, 3x3) + BatchNorm + ReLU
+
 Layer 8: Conv2D (128 filters, 3x3) + BatchNorm + ReLU
+
 Layer 9: MaxPooling2D (2x2) + Dropout (0.25)
 
 Layer 10: Flatten
+
 Layer 11: Dense (128 units) + ReLU + Dropout (0.5)
+
 Layer 12: Dense (10 units) + Softmax
 
 ## 📊 Results
